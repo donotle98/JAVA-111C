@@ -1,4 +1,4 @@
-// Homework 5: Recursion
+// Recursion
 
 import java.util.*;
 
