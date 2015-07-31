@@ -1,18 +1,16 @@
+// Homework 4 Timing
+
 import java.util.*;
 
 public class Homework4Driver {
 
 	public static void main(String[] args) {
 		
-		// I recommend starting with a small array to test that your methods work properly.
-		// You won't see a different in running time for small arrays.
-		// Once you know your methods work, increase the size to see the difference in run time!
 		int arraySize = 5;
 		int[] numbers = new int[arraySize];
 		fillWithUnique(numbers);
 		System.out.println("The array is: " + Arrays.toString(numbers));
 
-		// timing code comes from the Projects section of Chapter 4
 		Date current = new Date();
 		long startTime = current.getTime();
 		System.out.println("The missing integer is " + findMissingIntegerN(numbers));
@@ -21,7 +19,6 @@ public class Homework4Driver {
 		long elapsedTime = stopTime - startTime;
 		System.out.println("The linear method took " + elapsedTime + " milliseconds.");
 		
-
 		startTime = current.getTime();
 		System.out.println("The missing integer is " + findMissingIntegerN2(numbers));
 		current = new Date();
@@ -29,7 +26,6 @@ public class Homework4Driver {
 		elapsedTime = stopTime - startTime;
 		System.out.println("The quadratic method took " + elapsedTime + " milliseconds.");
 		
-		//testing extra credit 
 		int[] posNegNumbers = new int[arraySize];
 		fillWithPosNeg(posNegNumbers);
 		System.out.println(Arrays.toString(posNegNumbers));
@@ -45,7 +41,7 @@ public class Homework4Driver {
 		    for ( i = 0; i< n; i++)
 		    	missingNumber -= numbers[i];
 		    return missingNumber;
-		}
+	}
 	
 
 	private static int findMissingIntegerN2(int[] numbers) {
@@ -106,8 +102,4 @@ public class Homework4Driver {
 			numbers[i] = number;
 		}
 	}
-	
-
-
-	
 }
