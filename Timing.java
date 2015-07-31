@@ -1,4 +1,4 @@
-// Homework 4 Timing
+// Timing
 
 import java.util.*;
 
